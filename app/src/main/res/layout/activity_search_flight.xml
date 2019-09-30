@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/layoutout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true"
+        tools:context=".Activity.SearchFlightActivity">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/colorBlack"
+                  android:padding="10dp"
+
+
+    >
+        <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+                                                     android:layout_height="wrap_content"
+        android:layout_gravity="right">
+            <TextView
+                    android:text="0"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvPrice" android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:layout_constraintEnd_toStartOf="@+id/tvPrice2" android:layout_marginEnd="2dp"/>
+
+            <TextView
+                    android:textColor="@color/colorWhite"
+                    android:text=".00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvPrice2" android:textSize="9sp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+            <TextView
+                    android:textColor="@color/colorWhite"
+                    android:text="MYR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView11" android:textSize="9sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/tvPrice" android:layout_marginStart="4dp"/>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:layout_margin="8dp">
+        <TextView
+                android:text="Depart"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/lighter_grey2"
+                android:layout_weight="0.6"
+                android:textStyle="bold" android:id="@+id/tvFlightType"/>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_weight="0.6"
+                      android:background="@color/lighter_grey2"
+                      android:padding="8dp"
+
+        >
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="KUL"
+                      android:textColor="@color/colorBlack"
+                      android:layout_gravity="center"
+                      android:id="@+id/tvOrigin"/>
+
+            <ImageView android:layout_width="15dp" android:layout_height="15dp"
+                       android:src="@drawable/plane"
+                       android:rotation="90"
+                       android:layout_gravity="center"
+
+            />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="AOR"
+                      android:textColor="@color/colorBlack"
+                      android:layout_gravity="center"
+                      android:id="@+id/tvDestination"/>
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:layout_weight="0.1"
+                      android:background="@color/lighter_grey"
+                      android:padding="8dp"
+
+
+        >
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="Sort by"
+                      android:textColor="@color/colorBlack"
+            />
+        </LinearLayout>
+    </LinearLayout>
+    <com.ipay88.airasia.ViewUtility.HeightWrappingViewPager
+            android:id="@+id/calendar_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <RelativeLayout android:layout_width="50dp"
+                    android:layout_height="2dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_gravity="center_horizontal"
+    ></RelativeLayout>
+    <com.ipay88.airasia.ViewUtility.ViewPagerWithScrollListener
+            android:id="@+id/list_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_weight="1">
+    </com.ipay88.airasia.ViewUtility.ViewPagerWithScrollListener>
+    <Button
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSubmit"
+    android:background="@color/green500"
+    android:textColor="@color/colorWhite"
+            android:visibility="gone"
+    android:textStyle="bold"/>
+
+</LinearLayout>
